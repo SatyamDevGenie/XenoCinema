@@ -29,22 +29,22 @@ export default function SimpleBottomNavigation() {
       <BottomNavigationAction
         label="Trending"
         icon={<WhatshotIcon />}
-        style={{ color: "wheat" }}
+        style={{ color: "wheat", fontWeight: "bold" }}
       />
       <BottomNavigationAction
         label="Movies"
         icon={<MovieIcon />}
-        style={{ color: "wheat" }}
+        style={{ color: "wheat", fontWeight: "bold" }}
       />
       <BottomNavigationAction
         label="TV Series"
         icon={<TvIcon />}
-        style={{ color: "wheat" }}
+        style={{ color: "wheat", fontWeight: "bold" }}
       />
       <BottomNavigationAction
         label="Search"
         icon={<SearchIcon />}
-        style={{ color: "wheat" }}
+        style={{ color: "wheat", fontWeight: "bold" }}
       />
     </StyledBottomNavigation>
   );
