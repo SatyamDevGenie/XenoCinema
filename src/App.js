@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Movies from "./Pages/Movies/Movies";
+import Searching from "./Pages/Searching/Searching";
 import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import Header from "./components/Header/Header";
@@ -15,9 +16,10 @@ function App() {
         <div className="app">
           <Container>
             <Routes>
-              <Route path="/" Component={<Trending />} />
-              <Route path="/movies" Component={<Movies />} />
-              <Route path="/series" Component={<Series />} />
+              <Route path="/" element={<Trending />} />
+              <Route path="/movies" element={<Movies />} />
+              <Route path="/series" element={<Series />} />
+              <Route path="/search" element={<Searching />} />
             </Routes>
           </Container>
         </div>
