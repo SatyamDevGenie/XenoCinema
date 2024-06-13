@@ -11,8 +11,9 @@ const StyledBottomNavigation = styled(BottomNavigation)({
   width: "100%",
   position: "fixed",
   bottom: 0,
-  backgroundColor: "#2d313a",
+  backgroundColor: "#000000",
   zIndex: 100,
+  padding: "8px",
 });
 
 export default function SimpleBottomNavigation() {
