@@ -2,16 +2,45 @@ import Pagination from "@mui/material/Pagination";
 import { createMuiTheme, ThemeProvider } from "@mui/material/styles";
 import React from "react";
 
-const darkTheme = createMuiTheme({
+const customTheme = createMuiTheme({
   palette: {
     type: "dark",
+    primary: {
+      main: "#ffffff", // Set primary color to white
+    },
+    secondary: {
+      main: "#000000", // Set secondary color to black
+    },
+  },
+  typography: {
+    fontWeightBold: 900, // Bolder font weight
+  },
+  components: {
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          color: "#ffffff", // Default color
+          fontWeight: 900, // Bolder font
+          fontSize: "17px",
+        },
+        outlined: {
+          borderColor: "#000", // Border color
+        },
+        textPrimary: {
+          "&.Mui-selected": {
+            color: "#000000", // Selected color
+            backgroundColor: "#ffffff", // Background color for selected
+          },
+        },
+      },
+    },
   },
 });
 
-export default function CustomPagination({ setPage, numOfPages = 10 }) {
+export default function CustomPagination({ setPage, numOfPages = 100 }) {
   // Scroll to top when page changes
-  const handlePageChange = (page) => {
-    setPage(page);
+  const handlePageChange = (event, value) => {
+    setPage(value);
     window.scroll(0, 0);
   };
 
@@ -24,9 +53,9 @@ export default function CustomPagination({ setPage, numOfPages = 10 }) {
         marginTop: 10,
       }}
     >
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={customTheme}>
         <Pagination
-          onChange={(e) => handlePageChange(e.target.textContent)}
+          onChange={handlePageChange}
           count={numOfPages}
           color="primary"
           hideNextButton
