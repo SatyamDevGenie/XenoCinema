@@ -3,7 +3,7 @@ import React from "react";
 const Trending = () => {
   return (
     <div>
-      <span className="pageTitle">Trending</span>
+      <span className="pageTitle">TRENDING</span>
     </div>
   );
 };
