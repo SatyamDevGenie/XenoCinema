@@ -15,9 +15,9 @@ function App() {
         <div className="app">
           <Container>
             <Routes>
-              <Route path="/" element={<Trending />} />
-              <Route path="/movies" element={<Movies />} />
-              <Route path="/series" element={<Series />} />
+              <Route path="/" Component={<Trending />} />
+              <Route path="/movies" Component={<Movies />} />
+              <Route path="/series" Component={<Series />} />
             </Routes>
           </Container>
         </div>
