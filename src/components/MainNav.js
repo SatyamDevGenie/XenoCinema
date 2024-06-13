@@ -5,7 +5,8 @@ import WhatshotIcon from "@mui/icons-material/Whatshot";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { styled } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const StyledBottomNavigation = styled(BottomNavigation)({
   width: "100%",
@@ -18,6 +19,19 @@ const StyledBottomNavigation = styled(BottomNavigation)({
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (value === 0) {
+      navigate("/");
+    } else if (value === 1) {
+      navigate("/movies");
+    } else if (value === 2) {
+      navigate("/series");
+    } else if (value === 3) {
+      navigate("/search");
+    }
+  }, [value, navigate]);
 
   return (
     <StyledBottomNavigation
