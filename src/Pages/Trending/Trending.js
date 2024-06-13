@@ -21,7 +21,7 @@ const Trending = () => {
     <div>
       <span className="pageTitle">Trending </span>
       <div className="trending">
-        {content && content.map((c) => <SingleContent />)}
+        {content && content.map((c) => <SingleContent key={c.id} />)}
       </div>
     </div>
   );
