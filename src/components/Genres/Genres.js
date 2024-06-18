@@ -19,7 +19,7 @@ const Genres = ({
   useEffect(() => {
     fetchGenres();
     return () => {
-      setGenres({});
+      setGenres({}); // unmounting
     };
   }, []);
 
