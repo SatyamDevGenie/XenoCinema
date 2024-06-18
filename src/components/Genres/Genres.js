@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const Genres = ({
   selectedGenres,
@@ -25,7 +25,7 @@ const Genres = ({
     };
   }, []);
 
-  return <div>Genres</div>;
+  return <div style={{ padding: "6px 0" }}>Genres</div>;
 };
 
 export default Genres;
