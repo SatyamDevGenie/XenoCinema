@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Genres = ({
   selectedGenres,
@@ -15,6 +15,13 @@ const Genres = ({
     );
     setGenres(data.genres);
   };
+
+  useEffect(() => {
+    fetchGenres();
+    return () => {
+      setGenres({});
+    };
+  }, []);
 
   return <div>Genres</div>;
 };
