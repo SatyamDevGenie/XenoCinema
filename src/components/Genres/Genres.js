@@ -55,6 +55,12 @@ const Genres = ({
   type,
   setPage,
 }) => {
+  const handleAdd = (genre) => {
+    setSelectedGenres([...selectedGenres, genre]);
+    setGenres(genres.filter((g) => g.id !== genre.id));
+    setPage(1);
+  };
+
   const fetchGenres = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
@@ -78,6 +84,7 @@ const Genres = ({
           key={genre.id}
           clickable
           size="small"
+          onClick={() => handleAdd(genre)}
         />
       ))}
     </div>
