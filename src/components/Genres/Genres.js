@@ -1,6 +1,13 @@
 import React from "react";
 
-const Genres = () => {
+const Genres = ({
+  selectedGenres,
+  setSelectedGenres,
+  genres,
+  setGenres,
+  type,
+  setPage,
+}) => {
   return <div>Genres</div>;
 };
 
