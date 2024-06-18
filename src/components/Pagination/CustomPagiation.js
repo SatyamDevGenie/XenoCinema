@@ -1,8 +1,8 @@
 import Pagination from "@mui/material/Pagination";
-import { createMuiTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React from "react";
 
-const customTheme = createMuiTheme({
+const customTheme = createTheme({
   palette: {
     type: "dark",
     primary: {
