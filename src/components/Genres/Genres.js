@@ -70,10 +70,10 @@ const Genres = ({
   }, []);
 
   return (
-    <div style={{ padding: "6px 0" }}>
+    <div style={{ padding: "8px 0", margin: "12" }}>
       {genres.map((genre) => (
         <Chip
-          style={{ margin: "8", backgroundColor: "white" }}
+          style={{ backgroundColor: "white" }}
           label={genre.name}
           key={genre.id}
           clickable
