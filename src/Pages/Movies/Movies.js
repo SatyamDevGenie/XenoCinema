@@ -42,7 +42,7 @@ const Movies = () => {
       </div>
       <br /> <br />
       {numOfPages > 1 && (
-        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} /> // bug is there on numOfPages
       )}
       <br /> <br />
     </div>
