@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import CustomPagination from "../../components/Pagination/CustomPagiation";
 import SingleContent from "../../components/SingleContent/SingleContent";
 
+// import Genres from "../../components/Genres/Genres";
+import Genres from "../../components/Genres/Genres";
+
 const Movies = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
@@ -28,6 +31,14 @@ const Movies = () => {
   return (
     <div>
       <span className="pageTitle">Movies</span>
+      <Genres
+        type="movie"
+        selectedGenres={selectedGenres}
+        setSelectedGenres={setSelectedGenres}
+        genres={genres}
+        setGenres={setGenres}
+        setPage={setPage}
+      />
       <div className="trending">
         {content &&
           content.map((c) => (
