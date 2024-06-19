@@ -28,7 +28,15 @@ const Searching = () => {
             variant="outlined"
             // onChange={(e) => setSearchText(e.target.value)}
           />
-          <Button variant="conatinaed" style={{ marginLeft: "10" }}>
+          <Button
+            variant="contained"
+            style={{
+              marginLeft: "10px",
+              padding: "8px",
+              height: "50px",
+              width: "60px",
+            }}
+          >
             <SearchIcon />
           </Button>
         </div>
