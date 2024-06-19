@@ -1,7 +1,9 @@
 import TextField from "@mui/material/TextField";
-import React from "react";
+import React, { useState } from "react";
 
 const Searching = () => {
+  const [type, setType] = useState(0);
+
   return (
     <div>
       <TextField
