@@ -54,6 +54,7 @@ const Searching = () => {
             onChange={(e) => setSearchText(e.target.value)}
           />
           <Button
+            onClick={fetchSearch}
             variant="contained"
             style={{
               marginLeft: "10px",
