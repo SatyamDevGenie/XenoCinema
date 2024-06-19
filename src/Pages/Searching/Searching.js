@@ -1,8 +1,18 @@
+import { createTheme } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 
 const Searching = () => {
   const [type, setType] = useState(0);
+
+  const darkTheme = createTheme({
+    palette: {
+      type: "dark",
+      primary: {
+        main: "#fff",
+      },
+    },
+  });
 
   return (
     <div>
