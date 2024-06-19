@@ -8,6 +8,7 @@ import React, { useState } from "react";
 
 const Searching = () => {
   const [type, setType] = useState(0);
+  const [page, setPage] = useState(1);
 
   const darkTheme = createTheme({
     palette: {
@@ -45,7 +46,15 @@ const Searching = () => {
 
         {/* Tabs Component from MUI */}
 
-        <Tabs value={type} indicatorColor="primary" textColor="primary">
+        <Tabs
+          value={type}
+          indicatorColor="primary"
+          textColor="primary"
+          onChange={(event, newValue) => {
+            setType(newValue);
+            setPage(1);
+          }}
+        >
           <Tab style={{ width: "50%" }} label="Search Movies" />
           <Tab style={{ width: "50%" }} label="Search TV Series" />
         </Tabs>
