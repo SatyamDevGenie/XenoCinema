@@ -32,7 +32,7 @@ const Searching = () => {
             label="Search"
             // variant="filled"
             variant="outlined"
-            // onChange={(e) => setSearchText(e.target.value)}
+            onChange={(e) => setSearchText(e.target.value)}
           />
           <Button
             variant="contained"
