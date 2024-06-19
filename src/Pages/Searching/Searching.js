@@ -6,6 +6,8 @@ import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import CustomPagination from "../../components/Pagination/CustomPagiation";
+import SingleContent from "../../components/SingleContent/SingleContent";
 
 const Searching = () => {
   const [type, setType] = useState(0);
@@ -80,6 +82,26 @@ const Searching = () => {
           <Tab style={{ width: "50%" }} label="Search TV Series" />
         </Tabs>
       </ThemeProvider>
+      <div className="trending">
+        {content &&
+          content.map((c) => (
+            <SingleContent
+              key={c.id}
+              id={c.id}
+              poster={c.poster_path}
+              title={c.title || c.name}
+              date={c.first_air_date || c.release_date}
+              media_type={type ? "tv" : "movie"}
+              vote_average={c.vote_average}
+            />
+          ))}
+        {searchText &&
+          !content &&
+          (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
+      </div>
+      {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
     </div>
   );
 };
