@@ -54,6 +54,7 @@ const Searching = () => {
             setType(newValue);
             setPage(1);
           }}
+          style={{ paddingBottom: "5px" }}
         >
           <Tab style={{ width: "50%" }} label="Search Movies" />
           <Tab style={{ width: "50%" }} label="Search TV Series" />
