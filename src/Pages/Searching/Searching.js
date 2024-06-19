@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
+import axios from "axios";
 import React, { useState } from "react";
 
 const Searching = () => {
@@ -21,6 +22,16 @@ const Searching = () => {
       },
     },
   });
+
+  const fetchSearch = async () => {
+    try {
+      const { data } = await axios.get(
+        `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${
+          process.env.REACT_APP_API_KEY
+        }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+      );
+    } catch (error) {}
+  };
 
   return (
     <div>
