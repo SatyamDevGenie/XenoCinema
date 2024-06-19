@@ -10,7 +10,8 @@ const Searching = () => {
         style={{ flex: 1 }}
         className="searchBox"
         label="Search"
-        variant="filled"
+        // variant="filled"
+        variant="outlined"
         // onChange={(e) => setSearchText(e.target.value)}
       />
     </div>
