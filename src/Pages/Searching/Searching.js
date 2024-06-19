@@ -40,6 +40,8 @@ const Searching = () => {
             <SearchIcon />
           </Button>
         </div>
+
+        {/* Tabs Component from MUI */}
       </ThemeProvider>
     </div>
   );
