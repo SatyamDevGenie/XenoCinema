@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Searching = () => {
   const [type, setType] = useState(0);
@@ -32,6 +32,12 @@ const Searching = () => {
     setContent(data.results);
     setNumOfPages(data.total_pages);
   };
+
+  useEffect(() => {
+    window.scroll(0, 0);
+    fetchSearch();
+    // eslint-disable-next-line
+  }, [type, page]);
 
   return (
     <div>
