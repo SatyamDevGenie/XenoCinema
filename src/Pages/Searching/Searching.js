@@ -1,6 +1,8 @@
 import { Button } from "@mui/base";
 import SearchIcon from "@mui/icons-material/Search";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 
@@ -42,6 +44,11 @@ const Searching = () => {
         </div>
 
         {/* Tabs Component from MUI */}
+
+        <Tabs value={type} indicatorColor="primary" textColor="primary">
+          <Tab style={{ width: "50%" }} label="Search Movies" />
+          <Tab style={{ width: "50%" }} label="Search TV Series" />
+        </Tabs>
       </ThemeProvider>
     </div>
   );
