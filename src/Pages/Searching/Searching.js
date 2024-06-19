@@ -1,9 +1,16 @@
+import TextField from "@mui/material/TextField";
 import React from "react";
 
 const Searching = () => {
   return (
     <div>
-      <span className="pageTitle">Search</span>
+      <TextField
+        style={{ flex: 1 }}
+        className="searchBox"
+        label="Search"
+        variant="filled"
+        // onChange={(e) => setSearchText(e.target.value)}
+      />
     </div>
   );
 };
